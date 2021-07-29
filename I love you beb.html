@@ -1,0 +1,27 @@
+<html>
+ <head></head>
+ <body> 
+  <h1>Hai Beb Depee :* </h1> 
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkTI3M0mQyCe0T35xDG9mEIIlbCcgueq2Vhg&amp;usqp=CAU"> 
+  <h1> Mau ga jadi Ibu Dari Anak2 Ku? <button id="btn_music" onclick="music()">Play/Pause</button> </h1> 
+  <button id="btn_mau" onclick="alert(&quot;Makasih Beb Sayang&quot;)">Mau</button>&nbsp; 
+  <button id="btn_gamau" onclick="gamau(this)" style="position:absolute">Gamau</button> 
+  <audio id="bgMusic" src="https://media1.vocaroo.com/mp3/1eRe6wRilzNa" loop=""></audio> 
+  <script>
+        function gamau(id){
+            var mau = document.getElementById('btn_mau');
+            var i = Math.floor(Math.random()*300)+1;
+            var j = Math.floor(Math.random()*100)+mau.offsetTop;
+            id.style.left = i+'px';
+            id.style.top = j+'px';
+        }
+        var audioPlaying = false;
+        function music(){
+            var audio = document.getElementById("bgMusic");
+            if (!audioPlaying) audio.play();
+            else audio.pause();
+            audioPlaying = !audioPlaying;
+        }
+    </script> 
+ </body>
+</html>
